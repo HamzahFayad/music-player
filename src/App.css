@@ -64,6 +64,22 @@ h1{
   text-align: center;
   z-index: 4;
   position: relative;
+  cursor: pointer;
+}
+h1:hover{
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%,20%{
+      text-shadow: 4px 3px 0px #ED9B8F;
+  }
+  20%,60%{
+      text-shadow: 14px 6px 0px #ED9B8F;
+  }
+  60%,100%{
+      text-shadow: 4px 3px 0px #ED9B8F;
+  }
 }
 
 span.h1-opac1, span.h1-opac2 {
@@ -91,17 +107,33 @@ span.h1-opac2 {
 }
 
 
-h2, h3, p, ul, li, span, hr{
+h2, h3, p, ul, span, hr{
   margin: 1rem 0;
+  text-decoration: none;
+  list-style: none;
 }
+
 hr{
   border: 1px solid #343434;
   width: 80%;
 }
 
+/*NAV*/
+nav .logo{
+  background: #ED9B8F;
+  color: #ffffff;
+  width: max-content;
+  padding: 1rem;
+}
+@media screen and (max-width: 900px) {
+  nav .logo{
+    margin: 0 auto;
+  }
+}
+
 /*APP*/
 .Header-section {
-  margin: 6rem 0;
+  margin: 8rem 0;
 }
 @media screen and (min-width: 900px) {
 .Header-section{
@@ -123,18 +155,16 @@ h1{
 /*SVG PLAYER*/
 .Player{
     max-width: 750px;
-    /* height: 400px; */
     height: auto;
     resize: both;
     margin: 2rem 0;
     margin-top: 4rem;
     transform: rotate(-90deg);
-    /* overflow: auto; */
-   /* margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;*/
+}
+@media screen and (max-width: 900px) {
+  .Player{
+    margin-top: 6rem;
+  }
 }
 .Player svg{
   width: 95%;

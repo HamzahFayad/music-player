@@ -2,6 +2,7 @@
 // import Player from "./Player";
 
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Player from "./Player";
 
 function App() {
@@ -37,9 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        <ul>my_Tape</ul>
-      </nav>
+      <Navbar />
       <section className="Header-section">
         <div>
           <h1>
