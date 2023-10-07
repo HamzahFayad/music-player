@@ -2,8 +2,10 @@ function Navbar() {
   return (
     <>
       <nav>
-        <ul style={{ cursor: "pointer" }}>
-          <li className="logo">||| my_Tape |||</li>
+        <ul style={{ cursor: "default" }}>
+          <li className="logo">
+            <strong>||| my_Tape |||</strong>
+          </li>
         </ul>
       </nav>
     </>

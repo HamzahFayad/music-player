@@ -23,7 +23,6 @@ html, body{
 #FFF3E3 */
 
 .App {
-  padding: 2rem;
   background-color: rgba(255, 0, 0, 0);
   font-size: 16px;
 }
@@ -37,8 +36,11 @@ html, body{
     font-size: 26px;
   }
 }
+.Grid-width{
+  padding: 2rem;
+}
 @media screen and (min-width: 900px) {
-  .App {
+  .Grid-width {
     padding: 4rem;
   }
 }
@@ -65,6 +67,11 @@ h1{
   z-index: 4;
   position: relative;
   cursor: pointer;
+}
+@media screen and (max-width: 599px) {
+  h1{
+    font-size: 10em;
+  }
 }
 h1:hover{
   animation: blink 3s infinite;
@@ -160,6 +167,7 @@ h1{
     margin: 2rem 0;
     margin-top: 4rem;
     transform: rotate(-90deg);
+      perspective: 1000px;
 }
 @media screen and (max-width: 900px) {
   .Player{
@@ -171,7 +179,7 @@ h1{
   height: 95%;
   transition: transform 250ms;
   pointer-events: none;
-    filter:drop-shadow(6px 6px 0px rgba(72, 16, 16, 0.6))
+  filter:drop-shadow(6px 6px 0px rgba(72, 16, 16, 0.6));
 }
 
 .Player path{
@@ -193,6 +201,38 @@ svg #next-song-btn:hover{
   transform: translateY(5px);
 }
 
+.Showcase img{
+  position: absolute;
+  max-width: 600px;
+}
+.Showcase .img1{
+  transform: translateX(0%);
+  animation: swoosh 800ms ease-in-out forwards, swoosh2 800ms ease-in 800ms forwards;
+}
+
+.Showcase .img2{
+  transform: translateX(200%);
+  animation: appear 800ms ease-out 1600ms forwards,swoosh 800ms ease-in-out 2400ms forwards,
+    swoosh2 800ms ease-in 3200ms forwards;
+}
+
+@keyframes swoosh {
+  100%{
+    transform: translateX(20%);
+  }
+}
+
+@keyframes swoosh2 {
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes appear {
+  100%{
+    transform: translateX(0%);
+  }
+}
 /* .musicWrap{
   display: flex;
   flex-flow: row wrap;
